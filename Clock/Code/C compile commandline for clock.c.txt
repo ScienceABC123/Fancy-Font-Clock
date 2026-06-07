@@ -1,0 +1,1 @@
+gcc -o clock clock2.c simple_arm_graphics.o font_arial32.o font_arial64.o font_arial153.o font_century36.o font_century238.o Moon_64p_BMPs.o -lm -lwiringPi -Wall

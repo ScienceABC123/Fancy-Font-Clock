@@ -1,0 +1,83 @@
+STEP 1: Raspberry Pi Imager
+
+  Select your Raspberry Pi device
+    Raspberry Pi Zero 2 W
+
+  Choose operating system
+    Raspberry Pi OS (other)
+    Raspberry Pi OS (Legacy, 32-bit) Lite
+
+  Select your storage device
+    Generic MassStorageClass USB Device
+
+  Customisation: Choose hostname
+    {leave blank}
+
+  Customisation: Localisation
+    Capital city: Washington, D.C. (United States)
+    Time/zone: America/Chicago
+    Keyboard layout: us
+
+  Customisation: Choose username
+    Username: pi
+    Password: FancyFontClock
+    Confirm password: FancyFontClock
+
+  Customisation: Choose Wi-Fi
+    Secure Network
+    SSID: {enter WiFi name}
+    Password: {enter WiFi password}
+    Confirm password: {enter WiFi password}
+
+  Customisation: SSH authentication
+    Enable SSH
+    Authentication mechanism:
+      Use password authentication
+
+  Write image
+    I UNDERSTAND, ERASE AND WRITE
+
+STEP 2: OS Initial Startup
+
+  Install SD card in RaspberryPi Zero 2W and turn power on.
+
+  The OS initial startup will take just under 2 minutes to complete. During this time the display will be
+  "undefined" and there will be one automatic reboot at the login prompt before the OS initial startup completes.
+
+  Login at the command prompt
+
+STEP 3: Raspberry Pi Software Configuration Tool
+
+  sudo raspi-config
+
+  System Options
+    Auto Login
+      Would you like to automatically log in to the console?
+        <Yes>
+        <Ok>
+
+  <Finish>
+
+STEP 4: Edit config.txt
+
+  sudo nano /boot/firmware/config.txt
+
+    Change line from:
+      dtoverlay=vc4-kms-v3d
+    to:
+      # dtoverlay=vc4-kms-v3d
+
+    Add:
+      # HDMI 800x480
+      hdmi_group=2
+      hdmi_mode=1
+      hdmi_mode=87
+      hdmi_cvt=800 480 60 6 0 0 0
+
+    Ctrl-X
+      Save modified buffer?
+        y
+
+STEP 5: Reboot
+
+  sudo reboot

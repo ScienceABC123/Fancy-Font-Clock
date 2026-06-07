@@ -1,0 +1,6 @@
+#define DISPLAY_MODE 0
+#define DAY_BRIGHT 30
+#define NIGHT_BRIGHT 1
+#define AUTO_DIM_NIGHT 0
+#define LATITUDE 31.04169
+#define LONGITUDE -97.36376
