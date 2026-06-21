@@ -17,11 +17,11 @@ STEP 2: Transfer Fancy Font Clock files to Raspberry Pi
 
   Using an SSH file transfer app (I recommend WinSCP), login to the Raspberry Pi
 
-  On the SSH app, copy the "Clock" directory to the Raspberry Pi directory: /home/pi/
+  On the SSH app, copy the "Clock" directory to the Raspberry Pi "/home/pi/" directory
 
-  On the SSH app, navigate to the Raspberry Pi directory: /home/pi/Clock/Code/
+  On the SSH app, navigate to the Raspberry Pi "/home/pi/Clock/Code/" directory
 
-  On the SSH app, right-click on the "clock" file in the Raspberry Pi directory: /home/pi/Clock/Code/
+  On the SSH app, right-click on the "clock" file
   and select "Properties"
 
   On the SSH app, in the "Permissions:" section enable "X" for: Owner, Group, and Others
@@ -38,6 +38,6 @@ STEP 3: AutoStart Fancy Font Clock at boot
       Save modified buffer?
         y
 
-STEP 5: Reboot
+STEP 4: Reboot
 
   sudo reboot
